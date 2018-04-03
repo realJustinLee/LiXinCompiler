@@ -8,13 +8,13 @@ import java.util.Hashtable;
 /**
  * @author lixin
  */
-public class Env {
+public class Environment {
     private Hashtable hashtable;
-    protected Env prev;
+    protected Environment previousEnvironment;
 
-    public Env(Env env) {
+    public Environment(Environment environment) {
         hashtable = new Hashtable();
-        prev = env;
+        previousEnvironment = environment;
     }
 
     public void put(Token word, Id id) {
@@ -22,8 +22,8 @@ public class Env {
     }
 
     public Id get(Token word) {
-        for (Env env = this; env != null; env = env.prev) {
-            Id found = (Id) (env.hashtable.get(word));
+        for (Environment environment = this; environment != null; environment = environment.previousEnvironment) {
+            Id found = (Id) (environment.hashtable.get(word));
             if (found != null) {
                 return found;
             }
