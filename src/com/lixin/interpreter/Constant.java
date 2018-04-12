@@ -1,6 +1,6 @@
 package com.lixin.interpreter;
 
-import com.lixin.lexer.Number;
+import com.lixin.lexer.Numeric;
 import com.lixin.lexer.Token;
 import com.lixin.lexer.Word;
 import com.lixin.symbols.Type;
@@ -14,7 +14,7 @@ public class Constant extends ExpressionNode {
     }
 
     public Constant(int input) {
-        super(new Number(input), Type.Int);
+        super(new Numeric(input), Type.Int);
     }
 
     public static final Constant

@@ -3,10 +3,10 @@ package com.lixin.lexer;
 /**
  * @author lixin
  */
-public class Number extends Token {
+public class Numeric extends Token {
     public final int value;
 
-    public Number(int value) {
+    public Numeric(int value) {
         super(Tag.NUM);
         this.value = value;
     }

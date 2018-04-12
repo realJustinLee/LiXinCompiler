@@ -91,7 +91,7 @@ public class Lexer {
                 readChar();
             } while (Character.isDigit(peek));
             if (peek != '.') {
-                return new Number(value);
+                return new Numeric(value);
             }
             float preciseValue = value;
             float helperDigit = 10;
