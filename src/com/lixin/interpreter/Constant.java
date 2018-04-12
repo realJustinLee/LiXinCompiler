@@ -1,4 +1,4 @@
-package com.lixin.inter;
+package com.lixin.interpreter;
 
 import com.lixin.lexer.Number;
 import com.lixin.lexer.Token;

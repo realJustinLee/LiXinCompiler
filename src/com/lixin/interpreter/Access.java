@@ -1,4 +1,4 @@
-package com.lixin.inter;
+package com.lixin.interpreter;
 
 import com.lixin.lexer.Tag;
 import com.lixin.lexer.Word;
@@ -11,6 +11,11 @@ public class Access extends Operator {
     public Id array;
     public ExpressionNode index;
 
+    /**
+     * @param array 数组
+     * @param index 下标
+     * @param type  数组元素类型
+     */
     public Access(Id array, ExpressionNode index, Type type) {
         super(new Word("[]", Tag.INDEX), type);
         this.array = array;

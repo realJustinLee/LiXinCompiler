@@ -1,4 +1,4 @@
-package com.lixin.inter;
+package com.lixin.interpreter;
 
 import com.lixin.lexer.Word;
 import com.lixin.symbols.Type;

@@ -1,6 +1,6 @@
 package com.lixin.symbols;
 
-import com.lixin.inter.Id;
+import com.lixin.interpreter.Id;
 import com.lixin.lexer.Token;
 
 import java.util.Hashtable;
