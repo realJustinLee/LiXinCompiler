@@ -8,7 +8,7 @@ import com.lixin.symbols.Type;
 /**
  * @author lixin
  */
-public class Constant extends ExpressionNode {
+public class Constant extends Expression {
     public Constant(Token token, Type type) {
         super(token, type);
     }

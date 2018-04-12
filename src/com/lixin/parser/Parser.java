@@ -97,7 +97,7 @@ public class Parser {
     }
 
     Statement statement() throws IOException {
-        ExpressionNode node;
+        Expression node;
         Statement statement, statement1, statement2;
         Statement savedStatement;
         switch (look.tag) {
@@ -173,8 +173,8 @@ public class Parser {
         return statement;
     }
 
-    ExpressionNode bool() throws IOException {
-        ExpressionNode node = join();
+    Expression bool() throws IOException {
+        Expression node = join();
         while (look.tag == Tag.OR) {
             Token token = look;
             move();
@@ -183,8 +183,8 @@ public class Parser {
         return node;
     }
 
-    ExpressionNode join() throws IOException {
-        ExpressionNode node = equality();
+    Expression join() throws IOException {
+        Expression node = equality();
         while (look.tag == Tag.AND) {
             Token token = look;
             move();
@@ -193,8 +193,8 @@ public class Parser {
         return node;
     }
 
-    ExpressionNode equality() throws IOException {
-        ExpressionNode node = relation();
+    Expression equality() throws IOException {
+        Expression node = relation();
         while (look.tag == Tag.EQ || look.tag == Tag.NE) {
             Token token = look;
             move();
@@ -203,8 +203,8 @@ public class Parser {
         return node;
     }
 
-    ExpressionNode relation() throws IOException {
-        ExpressionNode node = expression();
+    Expression relation() throws IOException {
+        Expression node = expression();
         switch (look.tag) {
             case '<':
             case Tag.LE:
@@ -218,8 +218,8 @@ public class Parser {
         }
     }
 
-    ExpressionNode expression() throws IOException {
-        ExpressionNode node = term();
+    Expression expression() throws IOException {
+        Expression node = term();
         while (look.tag == '+' || look.tag == '-') {
             Token token = look;
             move();
@@ -228,8 +228,8 @@ public class Parser {
         return node;
     }
 
-    ExpressionNode term() throws IOException {
-        ExpressionNode node = unary();
+    Expression term() throws IOException {
+        Expression node = unary();
         while (look.tag == '*' || look.tag == '/') {
             Token token = look;
             move();
@@ -238,7 +238,7 @@ public class Parser {
         return node;
     }
 
-    ExpressionNode unary() throws IOException {
+    Expression unary() throws IOException {
         if (look.tag == '-') {
             move();
             return new Unary(Word.minus, unary());
@@ -251,8 +251,8 @@ public class Parser {
         }
     }
 
-    ExpressionNode factor() throws IOException {
-        ExpressionNode node = null;
+    Expression factor() throws IOException {
+        Expression node = null;
         switch (look.tag) {
             case '(':
                 move();
@@ -294,11 +294,11 @@ public class Parser {
     }
 
     Access offset(Id array) throws IOException {
-        ExpressionNode index;
-        ExpressionNode width;
-        ExpressionNode token1;
-        ExpressionNode token2;
-        ExpressionNode location;
+        Expression index;
+        Expression width;
+        Expression token1;
+        Expression token2;
+        Expression location;
         Type type = array.type;
         match('[');
         index = bool();

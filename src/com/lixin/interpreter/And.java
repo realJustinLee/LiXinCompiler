@@ -6,7 +6,7 @@ import com.lixin.lexer.Token;
  * @author lixin
  */
 public class And extends Logical {
-    public And(Token token, ExpressionNode node1, ExpressionNode node2) {
+    public And(Token token, Expression node1, Expression node2) {
         super(token, node1, node2);
     }
 

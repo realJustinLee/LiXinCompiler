@@ -6,16 +6,16 @@ import com.lixin.symbols.Type;
 /**
  * @author lixin
  */
-public class Operator extends ExpressionNode {
+public class Operator extends Expression {
     public Operator(Token token, Type type) {
         super(token, type);
     }
 
     @Override
-    public ExpressionNode reduce() {
-        ExpressionNode expressionNode = generate();
+    public Expression reduce() {
+        Expression expression = generate();
         Temp temp = new Temp(type);
-        emit(temp.toString() + "=" + expressionNode.toString());
+        emit(temp.toString() + "=" + expression.toString());
         return temp;
     }
 }

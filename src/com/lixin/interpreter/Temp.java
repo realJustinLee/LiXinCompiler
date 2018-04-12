@@ -6,7 +6,7 @@ import com.lixin.symbols.Type;
 /**
  * @author lixin
  */
-public class Temp extends ExpressionNode {
+public class Temp extends Expression {
     static int count = 0;
     int number;
 

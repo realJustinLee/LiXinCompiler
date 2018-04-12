@@ -6,7 +6,7 @@ import com.lixin.lexer.Token;
  * @author lixin
  */
 public class Not extends Logical {
-    public Not(Token token, ExpressionNode node2) {
+    public Not(Token token, Expression node2) {
         super(token, node2, node2);
     }
 

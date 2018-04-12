@@ -6,20 +6,20 @@ import com.lixin.symbols.Type;
 /**
  * @author lixin
  */
-public class ExpressionNode extends Node {
+public class Expression extends Node {
     public Token operator;
     public Type type;
 
-    ExpressionNode(Token operator, Type type) {
+    Expression(Token operator, Type type) {
         this.operator = operator;
         this.type = type;
     }
 
-    public ExpressionNode generate() {
+    public Expression generate() {
         return this;
     }
 
-    public ExpressionNode reduce() {
+    public Expression reduce() {
         return this;
     }
 

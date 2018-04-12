@@ -7,9 +7,9 @@ import com.lixin.symbols.Type;
  */
 public class Set extends Statement {
     public Id id;
-    public ExpressionNode node;
+    public Expression node;
 
-    public Set(Id id, ExpressionNode node) {
+    public Set(Id id, Expression node) {
         this.id = id;
         this.node = node;
         if (check(id.type, node.type) == null) {

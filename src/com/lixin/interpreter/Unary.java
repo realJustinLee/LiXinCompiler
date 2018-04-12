@@ -7,9 +7,9 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Unary extends Operator {
-    public ExpressionNode node;
+    public Expression node;
 
-    public Unary(Token token, ExpressionNode node) {
+    public Unary(Token token, Expression node) {
         super(token, null);
         this.node = node;
         type = Type.max(Type.Int, node.type);
@@ -19,7 +19,7 @@ public class Unary extends Operator {
     }
 
     @Override
-    public ExpressionNode generate() {
+    public Expression generate() {
         return new Unary(operator, node.reduce());
     }
 

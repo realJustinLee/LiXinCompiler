@@ -9,21 +9,21 @@ import com.lixin.symbols.Type;
  */
 public class Access extends Operator {
     public Id array;
-    public ExpressionNode index;
+    public Expression index;
 
     /**
      * @param array 数组
      * @param index 下标
      * @param type  数组元素类型
      */
-    public Access(Id array, ExpressionNode index, Type type) {
+    public Access(Id array, Expression index, Type type) {
         super(new Word("[]", Tag.INDEX), type);
         this.array = array;
         this.index = index;
     }
 
     @Override
-    public ExpressionNode generate() {
+    public Expression generate() {
         return new Access(array, index.reduce(), type);
     }
 

@@ -6,10 +6,10 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class If extends Statement {
-    ExpressionNode node;
+    Expression node;
     Statement statement;
 
-    public If(ExpressionNode node, Statement statement) {
+    public If(Expression node, Statement statement) {
         this.node = node;
         this.statement = statement;
         if (node.type != Type.Bool) {

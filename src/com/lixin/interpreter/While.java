@@ -6,7 +6,7 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class While extends Statement {
-    ExpressionNode node;
+    Expression node;
     Statement statement;
 
     public While() {
@@ -14,7 +14,7 @@ public class While extends Statement {
         statement = null;
     }
 
-    public void init(ExpressionNode node, Statement statement) {
+    public void init(Expression node, Statement statement) {
         this.node = node;
         this.statement = statement;
         if (node.type != Type.Bool) {

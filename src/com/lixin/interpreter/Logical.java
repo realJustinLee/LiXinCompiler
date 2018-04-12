@@ -6,10 +6,10 @@ import com.lixin.symbols.Type;
 /**
  * @author lixin
  */
-public class Logical extends ExpressionNode {
-    public ExpressionNode node1, node2;
+public class Logical extends Expression {
+    public Expression node1, node2;
 
-    Logical(Token token, ExpressionNode node1, ExpressionNode node2) {
+    Logical(Token token, Expression node1, Expression node2) {
         super(token, null);
         this.node1 = node1;
         this.node2 = node2;
@@ -23,7 +23,7 @@ public class Logical extends ExpressionNode {
     }
 
     @Override
-    public ExpressionNode generate() {
+    public Expression generate() {
         int positive = newLabel();
         int negative = newLabel();
         Temp temp = new Temp(type);

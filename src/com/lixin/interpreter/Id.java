@@ -6,7 +6,7 @@ import com.lixin.symbols.Type;
 /**
  * @author lixin
  */
-public class Id extends ExpressionNode {
+public class Id extends Expression {
     public int offset;
 
     public Id(Word id, Type type, int offset) {

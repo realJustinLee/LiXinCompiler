@@ -7,9 +7,9 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Arithmetic extends Operator {
-    public ExpressionNode node1, node2;
+    public Expression node1, node2;
 
-    public Arithmetic(Token token, ExpressionNode node1, ExpressionNode node2) {
+    public Arithmetic(Token token, Expression node1, Expression node2) {
         super(token, null);
         this.node1 = node1;
         this.node2 = node2;
@@ -20,7 +20,7 @@ public class Arithmetic extends Operator {
     }
 
     @Override
-    public ExpressionNode generate() {
+    public Expression generate() {
         return new Arithmetic(operator, node1.reduce(), node2.reduce());
     }
 

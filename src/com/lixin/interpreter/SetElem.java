@@ -8,10 +8,10 @@ import com.lixin.symbols.Type;
  */
 public class SetElem extends Statement {
     public Id array;
-    public ExpressionNode index;
-    public ExpressionNode node;
+    public Expression index;
+    public Expression node;
 
-    public SetElem(Access access, ExpressionNode node) {
+    public SetElem(Access access, Expression node) {
         array = access.array;
         index = access.index;
         this.node = node;

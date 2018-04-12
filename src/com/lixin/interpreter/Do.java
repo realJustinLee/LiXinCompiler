@@ -3,7 +3,7 @@ package com.lixin.interpreter;
 import com.lixin.symbols.Type;
 
 public class Do extends Statement {
-    ExpressionNode node;
+    Expression node;
     Statement statement;
 
     public Do() {
@@ -11,9 +11,9 @@ public class Do extends Statement {
         statement = null;
     }
 
-    //public void init(ExpressionNode node, Statement statement)
+    //public void init(Expression node, Statement statement)
 
-    public void init(Statement statement, ExpressionNode node) {
+    public void init(Statement statement, Expression node) {
         this.node = node;
         this.statement = statement;
         if (node.type != Type.Bool) {
