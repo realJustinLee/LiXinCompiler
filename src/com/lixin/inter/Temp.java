@@ -4,7 +4,7 @@ import com.lixin.lexer.Word;
 import com.lixin.symbols.Type;
 
 /**
- * @author justinadam
+ * @author lixin
  */
 public class Temp extends ExpressionNode {
     static int count = 0;

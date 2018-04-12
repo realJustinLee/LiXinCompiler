@@ -6,7 +6,7 @@ import com.lixin.lexer.Lexer;
  * @author lixin
  */
 public class Node {
-    int lexLine = 0;
+    int lexLine;
 
     Node() {
         lexLine = Lexer.line;
