@@ -25,10 +25,10 @@ public class Lexer {
         reserve(new Word("break", Tag.BREAK));
         reserve(Word.True);
         reserve(Word.False);
-        reserve(Type.Int);
-        reserve(Type.Char);
-        reserve(Type.Bool);
-        reserve(Type.Float);
+        reserve(Type.INT);
+        reserve(Type.CHAR);
+        reserve(Type.BOOL);
+        reserve(Type.FLOAT);
     }
 
     private void readChar() throws IOException {

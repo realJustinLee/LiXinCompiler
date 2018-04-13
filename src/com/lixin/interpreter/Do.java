@@ -19,7 +19,7 @@ public class Do extends Statement {
     public void init(Statement statement, Expression node) {
         this.node = node;
         this.statement = statement;
-        if (node.type != Type.Bool) {
+        if (node.type != Type.BOOL) {
             node.error("boolean required in do");
         }
     }

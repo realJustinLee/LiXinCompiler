@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea493c3e-3158-4741-8f53-b9370c4a95d6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Access.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Access.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Id.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Do.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Do.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Else.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Else.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/If.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/If.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Logical.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Logical.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Relation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Relation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/SetElem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/SetElem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/Unary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/Unary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/interpreter/While.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/interpreter/While.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/lexer/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/lexer/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/lexer/Word.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/lexer/Word.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lixin/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/symbols/Environment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/symbols/Environment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/symbols/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/symbols/Type.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +43,17 @@
       <file leaf-file-name="Environment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Environment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="209">
+              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Array.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Array.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -92,32 +101,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java">
+      <file leaf-file-name="Type.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Type.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="134" column="13" lean-forward="true" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
+            <state relative-caret-position="467">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+                <element signature="e#670#671#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Set.java">
+      <file leaf-file-name="Lexer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sequence.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Sequence.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+            <state relative-caret-position="324">
+              <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/com/lixin/inter/Expr.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/symbols/Env.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/symbols/Enviroment.java" />
-        <option value="$PROJECT_DIR$/src/com/lixin/symbols/Environment.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/inter/Exprression.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/inter/Expression.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/inter/Id.kt" />
@@ -195,11 +199,12 @@
         <option value="$PROJECT_DIR$/src/com/lixin/interpreter/Relation.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/interpreter/Set.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/interpreter/SetElem.java" />
-        <option value="$PROJECT_DIR$/src/com/lixin/symbols/Type.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/lexer/Word.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/lexer/Tag.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java" />
+        <option value="$PROJECT_DIR$/src/com/lixin/symbols/Environment.java" />
+        <option value="$PROJECT_DIR$/src/com/lixin/symbols/Type.java" />
       </list>
     </option>
   </component>
@@ -382,12 +387,12 @@
       <workItem from="1523504102853" duration="17518000" />
       <workItem from="1523524906999" duration="447000" />
       <workItem from="1523594894817" duration="858000" />
-      <workItem from="1523613724860" duration="2966000" />
+      <workItem from="1523613724860" duration="4873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45955000" />
+    <option name="totallyTimeSpent" value="47862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="960" extended-state="0" />
@@ -407,7 +412,7 @@
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.27106228" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.27106228" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32908458" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
@@ -742,23 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Array.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -837,13 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Environment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -891,10 +872,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="134" column="13" lean-forward="true" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
+        <state relative-caret-position="324">
+          <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Environment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
           </folding>
         </state>
       </provider>

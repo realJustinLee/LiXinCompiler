@@ -12,7 +12,7 @@ public class Unary extends Operator {
     public Unary(Token token, Expression node) {
         super(token, null);
         this.node = node;
-        type = Type.max(Type.Int, node.type);
+        type = Type.max(Type.INT, node.type);
         if (type == null) {
             error("type error");
         }

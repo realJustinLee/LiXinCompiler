@@ -14,12 +14,12 @@ public class Constant extends Expression {
     }
 
     public Constant(int input) {
-        super(new Numeric(input), Type.Int);
+        super(new Numeric(input), Type.INT);
     }
 
     public static final Constant
-            True = new Constant(Word.True, Type.Bool),
-            False = new Constant(Word.False, Type.Bool);
+            True = new Constant(Word.True, Type.BOOL),
+            False = new Constant(Word.False, Type.BOOL);
 
     @Override
     public void jumping(int positive, int negative) {

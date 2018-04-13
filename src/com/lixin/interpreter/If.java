@@ -12,7 +12,7 @@ public class If extends Statement {
     public If(Expression node, Statement statement) {
         this.node = node;
         this.statement = statement;
-        if (node.type != Type.Bool) {
+        if (node.type != Type.BOOL) {
             node.error("boolean required in if");
         }
     }

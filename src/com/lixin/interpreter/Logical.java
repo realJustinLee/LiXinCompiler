@@ -19,7 +19,7 @@ public class Logical extends Expression {
     }
 
     public Type check(Type type1, Type type2) {
-        return (type1 == Type.Bool && type2 == Type.Bool) ? Type.Bool : null;
+        return (type1 == Type.BOOL && type2 == Type.BOOL) ? Type.BOOL : null;
     }
 
     @Override

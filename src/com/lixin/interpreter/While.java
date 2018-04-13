@@ -17,7 +17,7 @@ public class While extends Statement {
     public void init(Expression node, Statement statement) {
         this.node = node;
         this.statement = statement;
-        if (node.type != Type.Bool) {
+        if (node.type != Type.BOOL) {
             node.error("boolean required in while");
         }
     }

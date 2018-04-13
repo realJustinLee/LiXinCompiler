@@ -7,7 +7,7 @@ import com.lixin.lexer.Tag;
  */
 public class Array extends Type {
     public Type of;
-    public int size;
+    private int size;
 
     public Array(int size, Type type) {
         super("[]", Tag.INDEX, size * type.width);

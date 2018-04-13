@@ -14,7 +14,7 @@ public class Else extends Statement {
         this.node = node;
         this.statement1 = statement1;
         this.statement2 = statement2;
-        if (node.type != Type.Bool) {
+        if (node.type != Type.BOOL) {
             node.error("boolean required in if");
         }
     }

@@ -20,12 +20,12 @@ public class Set extends Statement {
     public Type check(Type type1, Type type2) {
         /*if (Type.numeric(type1) && Type.numeric(type2)) {
             return type2;
-        } else if (type1 == Type.Bool && type2 == Type.Bool) {
+        } else if (type1 == Type.BOOL && type2 == Type.BOOL) {
             return type2;
         } else {
             return null;
         }*/
-        return Type.numeric(type1) && Type.numeric(type2) || type1 == Type.Bool && type2 == Type.Bool ? type2 : null;
+        return Type.numeric(type1) && Type.numeric(type2) || type1 == Type.BOOL && type2 == Type.BOOL ? type2 : null;
     }
 
     @Override

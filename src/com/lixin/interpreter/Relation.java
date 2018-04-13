@@ -17,11 +17,11 @@ public class Relation extends Logical {
         /*if (type1 instanceof Array || type2 instanceof Array) {
             return null;
         } else if (type1 == type2) {
-            return Type.Bool;
+            return Type.BOOL;
         } else {
             return null;
         }*/
-        return type1 instanceof Array || type2 instanceof Array ? null : type1 == type2 ? Type.Bool : null;
+        return type1 instanceof Array || type2 instanceof Array ? null : type1 == type2 ? Type.BOOL : null;
     }
 
     @Override

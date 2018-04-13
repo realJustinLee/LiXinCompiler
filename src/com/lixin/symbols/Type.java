@@ -17,13 +17,13 @@ public class Type extends Word {
     }
 
     public static final Type
-            Int = new Type("int", Tag.BASIC, 4),
-            Float = new Type("float", Tag.BASIC, 8),
-            Char = new Type("char", Tag.BASIC, 1),
-            Bool = new Type("bool", Tag.BASIC, 1);
+            INT = new Type("int", Tag.BASIC, 4),
+            FLOAT = new Type("float", Tag.BASIC, 8),
+            CHAR = new Type("char", Tag.BASIC, 1),
+            BOOL = new Type("bool", Tag.BASIC, 1);
 
     public static boolean numeric(Type type) {
-        return Arrays.asList(new Type[]{Type.Float, Type.Int, Type.Float}).contains(type);
+        return Arrays.asList(new Type[]{FLOAT, INT, FLOAT}).contains(type);
     }
 
     public static Type max(Type type1, Type type2) {
@@ -31,13 +31,13 @@ public class Type extends Word {
 
         if (!numeric(type1) || !numeric(type2)) {
             return null;
-        } else if (type1 == Type.Float || type2 == Float) {
-            return Type.Float;
-        } else if (type1 == Type.Int || type2 == Type.Int) {
-            return Type.Int;
+        } else if (type1 == Type.FLOAT || type2 == FLOAT) {
+            return Type.FLOAT;
+        } else if (type1 == Type.INT || type2 == Type.INT) {
+            return Type.INT;
         } else {
-            return Type.Char;
+            return Type.CHAR;
         }*/
-        return numeric(type1) && numeric(type2) ? type1 == Type.Float || type2 == Float ? Type.Float : type1 == Type.Int || type2 == Type.Int ? Type.Int : Type.Char : null;
+        return numeric(type1) && numeric(type2) ? type1 == FLOAT || type2 == FLOAT ? FLOAT : type1 == INT || type2 == INT ? INT : CHAR : null;
     }
 }

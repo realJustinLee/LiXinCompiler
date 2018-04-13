@@ -260,11 +260,11 @@ public class Parser {
                 match(')');
                 return node;
             case Tag.NUM:
-                node = new Constant(look, Type.Int);
+                node = new Constant(look, Type.INT);
                 move();
                 return node;
             case Tag.REAL:
-                node = new Constant(look, Type.Float);
+                node = new Constant(look, Type.FLOAT);
                 move();
                 return node;
             case Tag.TRUE:
