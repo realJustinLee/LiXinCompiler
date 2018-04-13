@@ -6,13 +6,13 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Set extends Statement {
-    public Id id;
+    public Identifier identifier;
     public Expression node;
 
-    public Set(Id id, Expression node) {
-        this.id = id;
+    public Set(Identifier identifier, Expression node) {
+        this.identifier = identifier;
         this.node = node;
-        if (check(id.type, node.type) == null) {
+        if (check(identifier.type, node.type) == null) {
 
         }
     }
@@ -30,6 +30,6 @@ public class Set extends Statement {
 
     @Override
     public void generate(int begin, int first) {
-        emit(id.toString() + " = " + node.generate().toString());
+        emit(identifier.toString() + " = " + node.generate().toString());
     }
 }

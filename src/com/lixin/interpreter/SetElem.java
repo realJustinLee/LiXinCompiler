@@ -7,7 +7,7 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class SetElem extends Statement {
-    public Id array;
+    public Identifier array;
     public Expression index;
     public Expression node;
 

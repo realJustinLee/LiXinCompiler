@@ -17,11 +17,14 @@ public class Word extends Token {
     }
 
     public static final Word
-            and = new Word("&&", Tag.AND), or = new Word("||", Tag.OR),
-            eq = new Word("==", Tag.EQ), ne = new Word("!=", Tag.NE),
-            le = new Word("<=", Tag.LE), ge = new Word(">=", Tag.GE),
+            AND = new Word("&&", Tag.AND),
+            OR = new Word("||", Tag.OR),
+            EQUAL = new Word("==", Tag.EQUAL),
+            NOT_EQUAL = new Word("!=", Tag.NOT_EQUAL),
+            LESS_EQUAL = new Word("<=", Tag.LESS_EQUAL),
+            GREATER_EQUAL = new Word(">=", Tag.GREATER_EQUAL),
             minus = new Word("-", Tag.MINUS),
             True = new Word("true", Tag.TRUE),
-            False = new Word("False", Tag.FALSE),
-            temp = new Word("temp", Tag.TEMP);
+            False = new Word("false", Tag.FALSE),
+            temp = new Word("t", Tag.TEMP);
 }

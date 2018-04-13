@@ -156,16 +156,16 @@ public class Parser {
     Statement assign() throws IOException {
         Statement statement;
         Token token = look;
-        match(Tag.ID);
-        Id id = top.get(token);
-        if (id == null) {
+        match(Tag.IDENTIFIER);
+        Identifier identifier = top.get(token);
+        if (identifier == null) {
             error(token.toString() + " undeclared");
         }
         if (look.tag == '=') {
             move();
-            statement = new Set(id, bool());
+            statement = new Set(identifier, bool());
         } else {
-            Access access = offset(id);
+            Access access = offset(identifier);
             match('=');
             statement = new SetElem(access, bool());
         }
@@ -195,7 +195,7 @@ public class Parser {
 
     Expression equality() throws IOException {
         Expression node = relation();
-        while (look.tag == Tag.EQ || look.tag == Tag.NE) {
+        while (look.tag == Tag.EQUAL || look.tag == Tag.NOT_EQUAL) {
             Token token = look;
             move();
             return new Relation(token, node, relation());
@@ -207,8 +207,8 @@ public class Parser {
         Expression node = expression();
         switch (look.tag) {
             case '<':
-            case Tag.LE:
-            case Tag.GE:
+            case Tag.LESS_EQUAL:
+            case Tag.GREATER_EQUAL:
             case '>':
                 Token token = look;
                 move();
@@ -275,17 +275,17 @@ public class Parser {
                 node = Constant.False;
                 move();
                 return node;
-            case Tag.ID:
+            case Tag.IDENTIFIER:
                 String stringLook = look.toString();
-                Id id = top.get(look);
-                if (id == null) {
+                Identifier identifier = top.get(look);
+                if (identifier == null) {
                     error(look.toString() + " undeclared");
                 }
                 move();
                 if (look.tag != '[') {
-                    return id;
+                    return identifier;
                 } else {
-                    return offset(id);
+                    return offset(identifier);
                 }
             default:
                 error("syntax error");
@@ -293,7 +293,7 @@ public class Parser {
         }
     }
 
-    Access offset(Id array) throws IOException {
+    Access offset(Identifier array) throws IOException {
         Expression index;
         Expression width;
         Expression token1;

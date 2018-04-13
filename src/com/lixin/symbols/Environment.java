@@ -1,6 +1,6 @@
 package com.lixin.symbols;
 
-import com.lixin.interpreter.Id;
+import com.lixin.interpreter.Identifier;
 import com.lixin.lexer.Token;
 
 import java.util.Hashtable;
@@ -17,13 +17,13 @@ public class Environment {
         previousEnvironment = environment;
     }
 
-    public void put(Token word, Id id) {
-        hashtable.put(word, id);
+    public void put(Token word, Identifier identifier) {
+        hashtable.put(word, identifier);
     }
 
-    public Id get(Token word) {
+    public Identifier get(Token word) {
         for (Environment environment = this; environment != null; environment = environment.previousEnvironment) {
-            Id found = (Id) (environment.hashtable.get(word));
+            Identifier found = (Identifier) (environment.hashtable.get(word));
             if (found != null) {
                 return found;
             }

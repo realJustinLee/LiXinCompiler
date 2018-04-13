@@ -8,7 +8,7 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Access extends Operator {
-    public Id array;
+    public Identifier array;
     public Expression index;
 
     /**
@@ -16,7 +16,7 @@ public class Access extends Operator {
      * @param index 下标
      * @param type  数组元素类型
      */
-    public Access(Id array, Expression index, Type type) {
+    public Access(Identifier array, Expression index, Type type) {
         super(new Word("[]", Tag.INDEX), type);
         this.array = array;
         this.index = index;

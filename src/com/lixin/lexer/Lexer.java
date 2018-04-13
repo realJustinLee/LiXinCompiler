@@ -10,10 +10,10 @@ import java.util.Hashtable;
  */
 public class Lexer {
     public static int line = 1;
-    char peek = ' ';
-    Hashtable words = new Hashtable();
+    private char peek = ' ';
+    private Hashtable<String, Word> words = new Hashtable<>();
 
-    void reserve(Word word) {
+    private void reserve(Word word) {
         words.put(word.lexeme, word);
     }
 
@@ -31,59 +31,66 @@ public class Lexer {
         reserve(Type.Float);
     }
 
-    void readChar() throws IOException {
+    private void readChar() throws IOException {
         peek = (char) System.in.read();
     }
 
-    boolean readChar(char c) throws IOException {
+    private boolean readChar(char c) throws IOException {
         readChar();
         if (peek != c) {
             return false;
+        } else {
+            peek = ' ';
+            return true;
         }
-        peek = ' ';
-        return true;
     }
 
     public Token scan() throws IOException {
-        label:
+        /*
+        for (; ; readChar()) {
+            if (peek == ' ' || peek == '\t') {
+                continue;
+            } else if (peek == '\n') {
+                line++;
+            } else {
+                break;
+            }
+        }
+        */
+
+        outerLoop:
         while (true) {
-            readChar();
-
-            // if (peek == ' ' || peek == '\t') {
-            //     // continue;
-            // } else if (peek == '\n') {
-            //     line++;
-            // } else {
-            //     break;
-            // }
-
             switch (peek) {
                 case ' ':
                 case '\t':
+                    readChar();
                     continue;
                 case '\n':
                     line++;
                     break;
                 default:
-                    break label;
+                    break outerLoop;
             }
+            readChar();
         }
+
         switch (peek) {
             case '&':
-                return readChar('&') ? Word.and : new Token('&');
+                return readChar('&') ? Word.AND : new Token('&');
             case '|':
-                return readChar('|') ? Word.and : new Token('|');
+                return readChar('|') ? Word.OR : new Token('|');
             case '=':
-                return readChar('=') ? Word.and : new Token('=');
+                return readChar('=') ? Word.EQUAL : new Token('=');
             case '!':
-                return readChar('=') ? Word.and : new Token('!');
+                return readChar('=') ? Word.NOT_EQUAL : new Token('!');
             case '<':
-                return readChar('=') ? Word.and : new Token('<');
+                return readChar('=') ? Word.LESS_EQUAL : new Token('<');
             case '>':
-                return readChar('=') ? Word.and : new Token('>');
+                return readChar('=') ? Word.GREATER_EQUAL : new Token('>');
             default:
                 break;
         }
+
         if (Character.isDigit(peek)) {
             int value = 0;
             do {
@@ -93,30 +100,42 @@ public class Lexer {
             if (peek != '.') {
                 return new Numeric(value);
             }
-            float preciseValue = value;
-            float helperDigit = 10;
+
+
+            // float preciseValue = value;
+            float preciseValue;
+            // Base Multiplier 默认 Decimal
+            float baseMultiplier = 10;
+            /*
             while (true) {
                 readChar();
                 if (!Character.isDigit(peek)) {
                     break;
                 }
-                preciseValue += Character.digit(peek, 10) / helperDigit;
-                helperDigit *= 10;
+                preciseValue += Character.digit(peek, 10) / baseMultiplier;
+                baseMultiplier *= 10;
+            }
+            */
+            for (preciseValue = value; Character.isDigit(peek); readChar()) {
+                preciseValue += Character.digit(peek, 10) / baseMultiplier;
+                baseMultiplier *= 10;
             }
             return new Real(preciseValue);
+
+
         }
         if (Character.isLetter(peek)) {
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder builder = new StringBuilder();
             do {
-                buffer.append(peek);
+                builder.append(peek);
                 readChar();
             } while (Character.isLetterOrDigit(peek));
-            String string = buffer.toString();
-            Word word = (Word) words.get(string);
+            String string = builder.toString();
+            Word word = words.get(string);
             if (word != null) {
                 return word;
             }
-            word = new Word(string, Tag.ID);
+            word = new Word(string, Tag.IDENTIFIER);
             words.put(string, word);
             return word;
         }
