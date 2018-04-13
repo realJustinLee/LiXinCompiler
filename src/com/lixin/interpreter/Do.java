@@ -2,6 +2,9 @@ package com.lixin.interpreter;
 
 import com.lixin.symbols.Type;
 
+/**
+ * @author lixin
+ */
 public class Do extends Statement {
     Expression node;
     Statement statement;
@@ -11,7 +14,7 @@ public class Do extends Statement {
         statement = null;
     }
 
-    //public void init(Expression node, Statement statement)
+    //  public void init(Expression node, Statement statement)
 
     public void init(Statement statement, Expression node) {
         this.node = node;

@@ -18,13 +18,13 @@ public class Set extends Statement {
     }
 
     public Type check(Type type1, Type type2) {
-        //  if (Type.numeric(type1) && Type.numeric(type2)) {
-        //      return type2;
-        //  } else if (type1 == Type.Bool && type2 == Type.Bool) {
-        //      return type2;
-        //  } else {
-        //      return null;
-        //  }
+        /*if (Type.numeric(type1) && Type.numeric(type2)) {
+            return type2;
+        } else if (type1 == Type.Bool && type2 == Type.Bool) {
+            return type2;
+        } else {
+            return null;
+        }*/
         return Type.numeric(type1) && Type.numeric(type2) || type1 == Type.Bool && type2 == Type.Bool ? type2 : null;
     }
 
