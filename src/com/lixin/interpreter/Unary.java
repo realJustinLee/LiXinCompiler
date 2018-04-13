@@ -7,12 +7,12 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Unary extends Operator {
-    public Expression node;
+    public Expression expression;
 
-    public Unary(Token token, Expression node) {
+    public Unary(Token token, Expression expression) {
         super(token, null);
-        this.node = node;
-        type = Type.max(Type.INT, node.type);
+        this.expression = expression;
+        type = Type.max(Type.INT, expression.type);
         if (type == null) {
             error("type error");
         }
@@ -20,11 +20,11 @@ public class Unary extends Operator {
 
     @Override
     public Expression generate() {
-        return new Unary(operator, node.reduce());
+        return new Unary(operator, expression.reduce());
     }
 
     @Override
     public String toString() {
-        return operator.toString() + " " + node.toString();
+        return operator.toString() + " " + expression.toString();
     }
 }

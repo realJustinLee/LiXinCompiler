@@ -268,11 +268,11 @@ public class Parser {
                 move();
                 return node;
             case Tag.TRUE:
-                node = Constant.True;
+                node = Constant.TRUE;
                 move();
                 return node;
             case Tag.FALSE:
-                node = Constant.False;
+                node = Constant.FALSE;
                 move();
                 return node;
             case Tag.IDENTIFIER:

@@ -13,8 +13,8 @@ public class Or extends Logical {
     @Override
     public void jumping(int positive, int negative) {
         int label = positive != 0 ? positive : newLabel();
-        node1.jumping(label, 0);
-        node2.jumping(positive, negative);
+        expression1.jumping(label, 0);
+        expression2.jumping(positive, negative);
         if (positive == 0) {
             emitLabel(label);
         }

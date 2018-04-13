@@ -7,10 +7,10 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Temp extends Expression {
-    static int count = 0;
-    int number;
+    private static int count = 0;
+    private int number;
 
-    public Temp(Type type) {
+    Temp(Type type) {
         super(Word.temp, type);
         number = ++count;
     }

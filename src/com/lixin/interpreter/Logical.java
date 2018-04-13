@@ -7,37 +7,37 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Logical extends Expression {
-    public Expression node1, node2;
+    public Expression expression1, expression2;
 
-    Logical(Token token, Expression node1, Expression node2) {
+    Logical(Token token, Expression expression1, Expression expression2) {
         super(token, null);
-        this.node1 = node1;
-        this.node2 = node2;
+        this.expression1 = expression1;
+        this.expression2 = expression2;
         if (type == null) {
             error("type error");
         }
     }
 
     public Type check(Type type1, Type type2) {
-        return (type1 == Type.BOOL && type2 == Type.BOOL) ? Type.BOOL : null;
+        return type1 == Type.BOOL && type2 == Type.BOOL ? Type.BOOL : null;
     }
 
     @Override
     public Expression generate() {
-        int positive = newLabel();
         int negative = newLabel();
+        int after = newLabel();
         Temp temp = new Temp(type);
         this.jumping(0, negative);
         emit(temp.toString() + " = true");
-        emit("goto L" + positive);
+        emit("goto L" + after);
         emitLabel(negative);
         emit(temp.toString() + " = false");
-        emitLabel(positive);
+        emitLabel(after);
         return temp;
     }
 
     @Override
     public String toString() {
-        return node1.toString() + " " + operator.toString() + " " + node2.toString();
+        return expression1.toString() + " " + operator.toString() + " " + expression2.toString();
     }
 }

@@ -18,14 +18,14 @@ public class Constant extends Expression {
     }
 
     public static final Constant
-            True = new Constant(Word.True, Type.BOOL),
-            False = new Constant(Word.False, Type.BOOL);
+            TRUE = new Constant(Word.TRUE, Type.BOOL),
+            FALSE = new Constant(Word.FALSE, Type.BOOL);
 
     @Override
     public void jumping(int positive, int negative) {
-        if (this == True && positive != 0) {
+        if (this == TRUE && positive != 0) {
             emit("goto L" + positive);
-        } else if (this == False && negative != 0) {
+        } else if (this == FALSE && negative != 0) {
             emit("goto L" + negative);
         }
     }

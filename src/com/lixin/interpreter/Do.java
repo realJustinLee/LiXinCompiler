@@ -14,7 +14,7 @@ public class Do extends Statement {
         statement = null;
     }
 
-    //  public void init(Expression node, Statement statement)
+    //  public void init(Expression expression1, Statement statement)
 
     public void init(Statement statement, Expression node) {
         this.node = node;

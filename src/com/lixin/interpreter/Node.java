@@ -6,7 +6,7 @@ import com.lixin.lexer.Lexer;
  * @author lixin
  */
 public class Node {
-    int lexLine;
+    private int lexLine;
 
     Node() {
         lexLine = Lexer.line;
@@ -16,7 +16,7 @@ public class Node {
         throw new Error("near line " + lexLine + ": " + message);
     }
 
-    static int labels = 0;
+    private static int labels = 0;
 
     public int newLabel() {
         return ++labels;

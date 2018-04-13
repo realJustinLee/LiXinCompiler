@@ -34,7 +34,7 @@ public class Expression extends Node {
         } else if (positive != 0) {
             emit("if " + condition + " goto L" + positive);
         } else if (negative != 0) {
-            emit("if" + condition + "goto L" + negative);
+            emit("if not " + condition + "goto L" + negative);
         }
     }
 

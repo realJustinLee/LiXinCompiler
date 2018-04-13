@@ -4,7 +4,7 @@ package com.lixin.lexer;
  * @author lixin
  */
 public class Word extends Token {
-    public String lexeme;
+    String lexeme;
 
     public Word(String lexeme, int tag) {
         super(tag);
@@ -23,8 +23,8 @@ public class Word extends Token {
             NOT_EQUAL = new Word("!=", Tag.NOT_EQUAL),
             LESS_EQUAL = new Word("<=", Tag.LESS_EQUAL),
             GREATER_EQUAL = new Word(">=", Tag.GREATER_EQUAL),
-            minus = new Word("-", Tag.MINUS),
-            True = new Word("true", Tag.TRUE),
-            False = new Word("false", Tag.FALSE),
-            temp = new Word("t", Tag.TEMP);
+            MINUS = new Word("-", Tag.MINUS),
+            TRUE = new Word("true", Tag.TRUE),
+            FALSE = new Word("false", Tag.FALSE),
+            TEMP = new Word("t", Tag.TEMP);
 }

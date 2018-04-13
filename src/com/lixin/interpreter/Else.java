@@ -6,16 +6,16 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Else extends Statement {
-    Expression node;
-    Statement statement1;
-    Statement statement2;
+    private Expression expression;
+    private Statement statement1;
+    private Statement statement2;
 
-    public Else(Expression node, Statement statement1, Statement statement2) {
-        this.node = node;
+    public Else(Expression expression, Statement statement1, Statement statement2) {
+        this.expression = expression;
         this.statement1 = statement1;
         this.statement2 = statement2;
-        if (node.type != Type.BOOL) {
-            node.error("boolean required in if");
+        if (expression.type != Type.BOOL) {
+            expression.error("boolean required in if");
         }
     }
 
@@ -23,11 +23,11 @@ public class Else extends Statement {
     public void generate(int begin, int first) {
         int label1 = newLabel();
         int label2 = newLabel();
-        node.jumping(0, label2);
+        expression.jumping(0, label2);
         emitLabel(label1);
         statement1.generate(label1, first);
         emit("goto L" + first);
         emitLabel(label2);
-        statement1.generate(label2, first);
+        statement2.generate(label2, first);
     }
 }

@@ -8,8 +8,8 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Relation extends Logical {
-    public Relation(Token token, Expression node1, Expression node2) {
-        super(token, node1, node2);
+    public Relation(Token token, Expression expression1, Expression expression2) {
+        super(token, expression1, expression2);
     }
 
     @Override
@@ -26,9 +26,9 @@ public class Relation extends Logical {
 
     @Override
     public void jumping(int positive, int negative) {
-        Expression nodeA = node1.reduce();
-        Expression nodeB = node2.reduce();
-        String test = nodeA.toString() + " " + operator.toString() + " " + nodeB.toString();
-        emitJumps(test, positive, negative);
+        Expression expressionA = expression1.reduce();
+        Expression expressionB = expression2.reduce();
+        String condition = expressionA.toString() + " " + operator.toString() + " " + expressionB.toString();
+        emitJumps(condition, positive, negative);
     }
 }

@@ -13,8 +13,8 @@ public class And extends Logical {
     @Override
     public void jumping(int positive, int negative) {
         int label = negative != 0 ? negative : newLabel();
-        node1.jumping(0, negative);
-        node2.jumping(positive, negative);
+        expression1.jumping(0, negative);
+        expression2.jumping(positive, negative);
         if (negative == 0) {
             emitLabel(label);
         }

@@ -7,13 +7,13 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Arithmetic extends Operator {
-    public Expression node1, node2;
+    public Expression expression1, expression2;
 
-    public Arithmetic(Token token, Expression node1, Expression node2) {
+    public Arithmetic(Token token, Expression expression1, Expression expression2) {
         super(token, null);
-        this.node1 = node1;
-        this.node2 = node2;
-        type = Type.max(node1.type, node2.type);
+        this.expression1 = expression1;
+        this.expression2 = expression2;
+        type = Type.max(expression1.type, expression2.type);
         if (type == null) {
             error("type error");
         }
@@ -21,11 +21,11 @@ public class Arithmetic extends Operator {
 
     @Override
     public Expression generate() {
-        return new Arithmetic(operator, node1.reduce(), node2.reduce());
+        return new Arithmetic(operator, expression1.reduce(), expression2.reduce());
     }
 
     @Override
     public String toString() {
-        return node1.toString() + " " + operator.toString() + " " + node2.toString();
+        return expression1.toString() + " " + operator.toString() + " " + expression2.toString();
     }
 }

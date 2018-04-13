@@ -6,14 +6,14 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class If extends Statement {
-    Expression node;
-    Statement statement;
+    private Expression expression;
+    private Statement statement;
 
-    public If(Expression node, Statement statement) {
-        this.node = node;
+    public If(Expression expression, Statement statement) {
+        this.expression = expression;
         this.statement = statement;
-        if (node.type != Type.BOOL) {
-            node.error("boolean required in if");
+        if (expression.type != Type.BOOL) {
+            expression.error("boolean required in if");
         }
     }
 
@@ -21,7 +21,7 @@ public class If extends Statement {
     public void generate(int begin, int first) {
         // statement 的代码标号
         int label = newLabel();
-        node.jumping(0, first);
+        expression.jumping(0, first);
         emitLabel(label);
         statement.generate(label, first);
     }

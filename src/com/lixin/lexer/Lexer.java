@@ -23,8 +23,8 @@ public class Lexer {
         reserve(new Word("while", Tag.WHILE));
         reserve(new Word("do", Tag.DO));
         reserve(new Word("break", Tag.BREAK));
-        reserve(Word.True);
-        reserve(Word.False);
+        reserve(Word.TRUE);
+        reserve(Word.FALSE);
         reserve(Type.INT);
         reserve(Type.CHAR);
         reserve(Type.BOOL);
