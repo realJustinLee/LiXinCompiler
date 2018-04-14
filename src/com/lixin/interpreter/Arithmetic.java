@@ -7,7 +7,7 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Arithmetic extends Operator {
-    public Expression expression1, expression2;
+    private Expression expression1, expression2;
 
     public Arithmetic(Token token, Expression expression1, Expression expression2) {
         super(token, null);
