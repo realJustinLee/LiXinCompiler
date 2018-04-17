@@ -92,7 +92,15 @@ lxc>
 ```
 输出
 ```
-   
+L1:	i = 0
+L3:	i = 365
+L4:	x = 0.0
+L5:	x = 3.1415896
+L6:	b = true
+L7:	b = false
+L8:	i = x
+L9:	x = i
+L2:
 ```
 ### identity:
 输入
@@ -118,7 +126,27 @@ lxc>
 ```
 输出
 ```
-
+L1:	i = 0
+L3:	if not i < 10 goto L4
+L5:	j = 0
+L6:	if not j < 10 goto L7
+L8:	t1=i * 80
+	t2=j * 8
+	t3=t1 + t2
+	a [ t3 ] = 0.0
+L9:	j = j + 1
+	goto L6
+L7:	i = i + 1
+	goto L3
+L4:	i = 0
+L10:	if not i < 10 goto L2
+L11:	t4=i * 80
+	t5=i * 8
+	t6=t4 + t5
+	a [ t6 ] = 1.0
+L12:	i = i + 1
+	goto L10
+L2:
 ```
 ### jump:
 输入

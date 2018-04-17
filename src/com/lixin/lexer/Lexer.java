@@ -116,13 +116,13 @@ public class Lexer {
                 baseMultiplier *= 10;
             }
             */
+            // 若删除下句则float会解析错误
+            readChar();
             for (preciseValue = value; Character.isDigit(peek); readChar()) {
                 preciseValue += Character.digit(peek, 10) / baseMultiplier;
                 baseMultiplier *= 10;
             }
             return new Real(preciseValue);
-
-
         }
         if (Character.isLetter(peek)) {
             StringBuilder builder = new StringBuilder();
