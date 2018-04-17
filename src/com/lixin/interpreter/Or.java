@@ -6,8 +6,8 @@ import com.lixin.lexer.Token;
  * @author lixin
  */
 public class Or extends Logical {
-    public Or(Token token, Expression node1, Expression node2) {
-        super(token, node1, node2);
+    public Or(Token token, Expression expression1, Expression expression2) {
+        super(token, expression1, expression2);
     }
 
     @Override

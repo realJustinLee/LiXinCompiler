@@ -6,18 +6,18 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Set extends Statement {
-    public Identifier identifier;
-    public Expression node;
+    private Identifier identifier;
+    private Expression expression;
 
-    public Set(Identifier identifier, Expression node) {
+    public Set(Identifier identifier, Expression expression) {
         this.identifier = identifier;
-        this.node = node;
-        if (check(identifier.type, node.type) == null) {
-
+        this.expression = expression;
+        if (check(identifier.type, expression.type) == null) {
+            error("type error");
         }
     }
 
-    public Type check(Type type1, Type type2) {
+    private Type check(Type type1, Type type2) {
         /*if (Type.numeric(type1) && Type.numeric(type2)) {
             return type2;
         } else if (type1 == Type.BOOL && type2 == Type.BOOL) {
@@ -30,6 +30,6 @@ public class Set extends Statement {
 
     @Override
     public void generate(int begin, int first) {
-        emit(identifier.toString() + " = " + node.generate().toString());
+        emit(identifier.toString() + " = " + expression.generate().toString());
     }
 }

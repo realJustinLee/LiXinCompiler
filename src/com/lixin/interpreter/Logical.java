@@ -7,7 +7,7 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Logical extends Expression {
-    public Expression expression1, expression2;
+    Expression expression1, expression2;
 
     Logical(Token token, Expression expression1, Expression expression2) {
         super(token, null);

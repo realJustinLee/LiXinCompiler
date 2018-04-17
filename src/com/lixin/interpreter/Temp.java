@@ -11,7 +11,7 @@ public class Temp extends Expression {
     private int number;
 
     Temp(Type type) {
-        super(Word.temp, type);
+        super(Word.TEMP, type);
         number = ++count;
     }
 

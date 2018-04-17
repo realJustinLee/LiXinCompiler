@@ -129,9 +129,9 @@ public class Parser {
                 Statement.Enclosing = savedStatement;
                 return whileNode;
             case Tag.DO:
-                Do doNode = new Do();
+                Do doExpression = new Do();
                 savedStatement = Statement.Enclosing;
-                Statement.Enclosing = doNode;
+                Statement.Enclosing = doExpression;
                 match(Tag.DO);
                 statement1 = statement();
                 match(Tag.WHILE);
@@ -139,9 +139,9 @@ public class Parser {
                 node = bool();
                 match(')');
                 match(';');
-                doNode.init(statement1, node);
+                doExpression.init(statement1, node);
                 Statement.Enclosing = savedStatement;
-                return doNode;
+                return doExpression;
             case Tag.BREAK:
                 match(Tag.BREAK);
                 match(';');
@@ -241,7 +241,7 @@ public class Parser {
     Expression unary() throws IOException {
         if (look.tag == '-') {
             move();
-            return new Unary(Word.minus, unary());
+            return new Unary(Word.MINUS, unary());
         } else if (look.tag == '!') {
             Token token = look;
             move();

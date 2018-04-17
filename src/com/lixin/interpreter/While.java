@@ -14,11 +14,11 @@ public class While extends Statement {
         statement = null;
     }
 
-    public void init(Expression node, Statement statement) {
-        this.expression = node;
+    public void init(Expression expression, Statement statement) {
+        this.expression = expression;
         this.statement = statement;
-        if (node.type != Type.BOOL) {
-            node.error("boolean required in while");
+        if (expression.type != Type.BOOL) {
+            expression.error("boolean required in while");
         }
     }
 

@@ -8,8 +8,8 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Access extends Operator {
-    public Identifier array;
-    public Expression index;
+    Identifier array;
+    Expression index;
 
     /**
      * @param array 数组

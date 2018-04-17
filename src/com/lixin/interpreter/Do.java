@@ -6,8 +6,8 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Do extends Statement {
-    Expression node;
-    Statement statement;
+    private Expression node;
+    private Statement statement;
 
     public Do() {
         node = null;
@@ -17,8 +17,8 @@ public class Do extends Statement {
     //  public void init(Expression expression1, Statement statement)
 
     public void init(Statement statement, Expression node) {
-        this.node = node;
         this.statement = statement;
+        this.node = node;
         if (node.type != Type.BOOL) {
             node.error("boolean required in do");
         }
