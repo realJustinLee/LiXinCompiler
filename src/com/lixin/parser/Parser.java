@@ -15,7 +15,7 @@ public class Parser {
     private Lexer lexer;
     private Token look;
     private Environment top = null;
-    int used = 0;
+    private int used = 0;
 
     public Parser(Lexer lexer) throws IOException {
         this.lexer = lexer;
@@ -70,31 +70,31 @@ public class Parser {
         }
     }
 
-    Type type() throws IOException {
+    private Type type() throws IOException {
         Type type = (Type) look;
         match(Tag.BASIC);
         if (look.tag != '[') {
             return type;
         } else {
-            return dims(type);
+            return deBracket(type);
         }
     }
 
     /**
-     * TODO: 重命名
+     * Original Name: dims
      */
-    Type dims(Type type) throws IOException {
+    private Type deBracket(Type type) throws IOException {
         match('[');
         Token token = look;
         match(Tag.NUM);
         match(']');
         if (look.tag == '[') {
-            type = dims(type);
+            type = deBracket(type);
         }
         return new Array(((Numeric) token).value, type);
     }
 
-    Statement statements() throws IOException {
+    private Statement statements() throws IOException {
         if (look.tag == '}') {
             return Statement.NULL;
         } else {
@@ -102,9 +102,10 @@ public class Parser {
         }
     }
 
-    Statement statement() throws IOException {
-        Expression node;
-        Statement statement, statement1, statement2;
+    private Statement statement() throws IOException {
+        Expression expression;
+        // Statement statement;
+        Statement statement1, statement2;
         Statement savedStatement;
         switch (look.tag) {
             case ';':
@@ -113,41 +114,41 @@ public class Parser {
             case Tag.IF:
                 match(Tag.IF);
                 match('(');
-                node = bool();
+                expression = bool();
                 match(')');
                 statement1 = statement();
                 if (look.tag != Tag.FALSE) {
-                    return new If(node, statement1);
+                    return new If(expression, statement1);
                 }
                 match(Tag.FALSE);
                 statement2 = statement();
-                return new Else(node, statement1, statement2);
+                return new Else(expression, statement1, statement2);
             case Tag.WHILE:
                 While whileNode = new While();
                 savedStatement = Statement.ENCLOSING;
                 Statement.ENCLOSING = whileNode;
                 match(Tag.WHILE);
                 match('(');
-                node = bool();
+                expression = bool();
                 match(')');
                 statement1 = statement();
-                whileNode.init(node, statement1);
+                whileNode.init(expression, statement1);
                 Statement.ENCLOSING = savedStatement;
                 return whileNode;
             case Tag.DO:
-                Do doExpression = new Do();
+                Do doNode = new Do();
                 savedStatement = Statement.ENCLOSING;
-                Statement.ENCLOSING = doExpression;
+                Statement.ENCLOSING = doNode;
                 match(Tag.DO);
                 statement1 = statement();
                 match(Tag.WHILE);
                 match('(');
-                node = bool();
+                expression = bool();
                 match(')');
                 match(';');
-                doExpression.init(statement1, node);
+                doNode.init(statement1, expression);
                 Statement.ENCLOSING = savedStatement;
-                return doExpression;
+                return doNode;
             case Tag.BREAK:
                 match(Tag.BREAK);
                 match(';');
@@ -159,7 +160,7 @@ public class Parser {
         }
     }
 
-    Statement assign() throws IOException {
+    private Statement assign() throws IOException {
         Statement statement;
         Token token = look;
         match(Tag.IDENTIFIER);
@@ -179,38 +180,38 @@ public class Parser {
         return statement;
     }
 
-    Expression bool() throws IOException {
-        Expression node = join();
+    private Expression bool() throws IOException {
+        Expression expression = join();
         while (look.tag == Tag.OR) {
             Token token = look;
             move();
-            node = new Or(token, node, join());
+            expression = new Or(token, expression, join());
         }
-        return node;
+        return expression;
     }
 
-    Expression join() throws IOException {
-        Expression node = equality();
+    private Expression join() throws IOException {
+        Expression expression = equality();
         while (look.tag == Tag.AND) {
             Token token = look;
             move();
-            node = new And(token, node, equality());
+            expression = new And(token, expression, equality());
         }
-        return node;
+        return expression;
     }
 
-    Expression equality() throws IOException {
-        Expression node = relation();
+    private Expression equality() throws IOException {
+        Expression expression = relation();
         while (look.tag == Tag.EQUAL || look.tag == Tag.NOT_EQUAL) {
             Token token = look;
             move();
-            return new Relation(token, node, relation());
+            return new Relation(token, expression, relation());
         }
-        return node;
+        return expression;
     }
 
-    Expression relation() throws IOException {
-        Expression node = expression();
+    private Expression relation() throws IOException {
+        Expression expression = expression();
         switch (look.tag) {
             case '<':
             case Tag.LESS_EQUAL:
@@ -218,33 +219,33 @@ public class Parser {
             case '>':
                 Token token = look;
                 move();
-                return new Relation(token, node, expression());
+                return new Relation(token, expression, expression());
             default:
-                return node;
+                return expression;
         }
     }
 
-    Expression expression() throws IOException {
-        Expression node = term();
+    private Expression expression() throws IOException {
+        Expression expression = term();
         while (look.tag == '+' || look.tag == '-') {
             Token token = look;
             move();
-            return new Arithmetic(token, node, term());
+            return new Arithmetic(token, expression, term());
         }
-        return node;
+        return expression;
     }
 
-    Expression term() throws IOException {
-        Expression node = unary();
+    private Expression term() throws IOException {
+        Expression expression = unary();
         while (look.tag == '*' || look.tag == '/') {
             Token token = look;
             move();
-            return new Arithmetic(token, node, unary());
+            return new Arithmetic(token, expression, unary());
         }
-        return node;
+        return expression;
     }
 
-    Expression unary() throws IOException {
+    private Expression unary() throws IOException {
         if (look.tag == '-') {
             move();
             return new Unary(Word.MINUS, unary());
@@ -257,32 +258,32 @@ public class Parser {
         }
     }
 
-    Expression factor() throws IOException {
-        Expression node = null;
+    private Expression factor() throws IOException {
+        Expression expression = null;
         switch (look.tag) {
             case '(':
                 move();
-                node = bool();
+                expression = bool();
                 match(')');
-                return node;
+                return expression;
             case Tag.NUM:
-                node = new Constant(look, Type.INT);
+                expression = new Constant(look, Type.INT);
                 move();
-                return node;
+                return expression;
             case Tag.REAL:
-                node = new Constant(look, Type.FLOAT);
+                expression = new Constant(look, Type.FLOAT);
                 move();
-                return node;
+                return expression;
             case Tag.TRUE:
-                node = Constant.TRUE;
+                expression = Constant.TRUE;
                 move();
-                return node;
+                return expression;
             case Tag.FALSE:
-                node = Constant.FALSE;
+                expression = Constant.FALSE;
                 move();
-                return node;
+                return expression;
             case Tag.IDENTIFIER:
-                String stringLook = look.toString();
+                // String stringLook = look.toString(); 没用
                 Identifier identifier = top.get(look);
                 if (identifier == null) {
                     error(look.toString() + " undeclared");
@@ -295,15 +296,14 @@ public class Parser {
                 }
             default:
                 error("syntax error");
-                return node;
+                return expression;
         }
     }
 
-    Access offset(Identifier array) throws IOException {
+    private Access offset(Identifier array) throws IOException {
         Expression index;
         Expression width;
-        Expression token1;
-        Expression token2;
+        Expression token1, token2;
         Expression location;
         Type type = array.type;
         match('[');
