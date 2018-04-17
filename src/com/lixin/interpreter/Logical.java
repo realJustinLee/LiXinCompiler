@@ -13,6 +13,7 @@ public class Logical extends Expression {
         super(token, null);
         this.expression1 = expression1;
         this.expression2 = expression2;
+        type = check(expression1.type, expression2.type);
         if (type == null) {
             error("type error");
         }
