@@ -5,8 +5,9 @@ Referenced from the dragon-book, just a little implementation of the dragon-book
 
 ## GitHub链接
 - [LiXinCompiler](https://github.com/Great-Li-Xin/LiXinCompiler)
+
 ## 博客文章链接
-- [LiXinCompiler -- 参考自龙书上的语言，自己实现了一个编译器的前端]()
+- [一个完整的编译器前端(Java 实现)](https://great-li-xin.github.io/2018/04/17/LiXinCompiler/)
 
 ## 源语言
 这个语言由一个程序和一个块组成，该块中包含可选的声名和语句。语法符号```basic```表示基本类型。
@@ -71,7 +72,7 @@ L7:	b = 3
 L8:	a = a + 1
 L9:	b = b + 1
 L5:	a = a + 1
-L10:b = b + 1
+L10:    b = b + 1
 L2:
 ```
 ### expression:
@@ -163,12 +164,12 @@ lxc>
 	if ( a >= b ) b = a;
 	if ( x > y ) y = x;
 	if ( a == b );
-        if( x < 100 || x > 200 ) x = 0;
-        if( a < 100 && a > 200 ) b = 0;
-        if( x < 100 || (x > 200 && x != y) ) x = 0;
-        if( a < 100 || (a > 200 && a != 150) || a != 0 ) a = 0;
-        if( x > 200 && x != b || x < 100 ) x = 0;
-        if( a < 100 || a > 200 && a != b ) a = 0;
+	if( x < 100 || x > 200 ) x = 0;
+	if( a < 100 && a > 200 ) b = 0;
+	if( x < 100 || (x > 200 && x != y) ) x = 0;
+	if( a < 100 || (a > 200 && a != 150) || a != 0 ) a = 0;
+	if( x > 200 && x != b || x < 100 ) x = 0;
+	if( a < 100 || a > 200 && a != b ) a = 0;
 }
 ```
 输出
