@@ -9,21 +9,21 @@ import java.util.Hashtable;
  * @author lixin
  */
 public class Environment {
-    private Hashtable hashtable;
-    protected Environment previousEnvironment;
+    private Hashtable<Token, Identifier> table;
+    private Environment previousEnvironment;
 
     public Environment(Environment environment) {
-        hashtable = new Hashtable();
+        table = new Hashtable<>();
         previousEnvironment = environment;
     }
 
     public void put(Token word, Identifier identifier) {
-        hashtable.put(word, identifier);
+        table.put(word, identifier);
     }
 
     public Identifier get(Token word) {
         for (Environment environment = this; environment != null; environment = environment.previousEnvironment) {
-            Identifier found = (Identifier) (environment.hashtable.get(word));
+            Identifier found = (environment.table.get(word));
             if (found != null) {
                 return found;
             }

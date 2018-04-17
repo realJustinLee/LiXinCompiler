@@ -7,7 +7,7 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Expression extends Node {
-    public Token operator;
+    Token operator;
     public Type type;
 
     Expression(Token operator, Type type) {
@@ -27,14 +27,14 @@ public class Expression extends Node {
         emitJumps(toString(), positive, negative);
     }
 
-    public void emitJumps(String condition, int positive, int negative) {
+    void emitJumps(String condition, int positive, int negative) {
         if (positive != 0 && negative != 0) {
             emit("if " + condition + " goto L" + positive);
             emit("goto L" + negative);
         } else if (positive != 0) {
             emit("if " + condition + " goto L" + positive);
         } else if (negative != 0) {
-            emit("if not " + condition + "goto L" + negative);
+            emit("if not " + condition + " goto L" + negative);
         }
     }
 
