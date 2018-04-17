@@ -3,6 +3,11 @@ Referenced from the dragon-book, just a little implementation of the dragon-book
 
 参考自龙书上的语言，自己实现了一个编译器的前端。
 
+## GitHub链接
+- [LiXinCompiler](https://github.com/Great-Li-Xin/LiXinCompiler)
+## 博客文章链接
+- [LiXinCompiler -- 参考自龙书上的语言，自己实现了一个编译器的前端]()
+
 ## 源语言
 这个语言由一个程序和一个块组成，该块中包含可选的声名和语句。语法符号```basic```表示基本类型。
 
@@ -40,6 +45,7 @@ factor      ->  ( bool ) | location | numeric | real | true | false
 ### block:
 输入
 ```
+lxc>
 {
 	int a; int b; a = 0; b = 0;
 	{
@@ -71,6 +77,7 @@ L2:
 ### expression:
 输入
 ```
+lxc>
 {
 	int i; float x; bool b;
 	i = 0;
@@ -90,6 +97,7 @@ L2:
 ### identity:
 输入
 ```
+lxc>
 {
 	int i; int j; float[10][10] a;
 	i = 0;
@@ -115,6 +123,7 @@ L2:
 ### jump:
 输入
 ```
+lxc>
 {
     int x; int y; int a; int b;
 	if( true ) a = 0;
@@ -178,6 +187,7 @@ L2:
 ### program:
 输入
 ```
+lxc>
 {
 	int i; int j; float v; float x; float[100] a;
 	while( true ) {
