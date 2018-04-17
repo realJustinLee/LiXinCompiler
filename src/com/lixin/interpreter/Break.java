@@ -4,13 +4,13 @@ package com.lixin.interpreter;
  * @author lixin
  */
 public class Break extends Statement {
-    Statement statement;
+    private Statement statement;
 
     public Break() {
-        if (Statement.Enclosing == Statement.Null) {
+        if (Statement.ENCLOSING == Statement.NULL) {
             error("unenclosed break");
         }
-        statement = Statement.Enclosing;
+        statement = Statement.ENCLOSING;
     }
 
     @Override

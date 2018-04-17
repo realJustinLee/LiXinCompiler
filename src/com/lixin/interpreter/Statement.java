@@ -7,7 +7,7 @@ public class Statement extends Node {
     public Statement() {
     }
 
-    public static Statement Null = new Statement();
+    public static Statement NULL = new Statement();
 
     /**
      * @param begin 语句代码的开始处
@@ -24,5 +24,5 @@ public class Statement extends Node {
     /**
      * 用于 break 语句
      */
-    public static Statement Enclosing = Statement.Null;
+    public static Statement ENCLOSING = Statement.NULL;
 }

@@ -6,21 +6,21 @@ import com.lixin.symbols.Type;
  * @author lixin
  */
 public class Do extends Statement {
-    private Expression node;
+    private Expression expression;
     private Statement statement;
 
     public Do() {
-        node = null;
+        expression = null;
         statement = null;
     }
 
     //  public void init(Expression expression1, Statement statement)
 
-    public void init(Statement statement, Expression node) {
+    public void init(Statement statement, Expression expression) {
         this.statement = statement;
-        this.node = node;
-        if (node.type != Type.BOOL) {
-            node.error("boolean required in do");
+        this.expression = expression;
+        if (expression.type != Type.BOOL) {
+            expression.error("boolean required in do");
         }
     }
 
@@ -30,6 +30,6 @@ public class Do extends Statement {
         int label = newLabel();
         statement.generate(begin, label);
         emitLabel(label);
-        node.jumping(begin, 0);
+        expression.jumping(begin, 0);
     }
 }

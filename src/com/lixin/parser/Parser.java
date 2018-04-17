@@ -14,7 +14,7 @@ import java.io.IOException;
 public class Parser {
     private Lexer lexer;
     private Token look;
-    Environment top = null;
+    private Environment top = null;
     int used = 0;
 
     public Parser(Lexer lexer) throws IOException {
@@ -22,15 +22,15 @@ public class Parser {
         move();
     }
 
-    void move() throws IOException {
+    private void move() throws IOException {
         look = lexer.scan();
     }
 
-    void error(String message) {
+    private void error(String message) {
         throw new Error("near line " + Lexer.line + ": " + message);
     }
 
-    void match(int tag) throws IOException {
+    private void match(int tag) throws IOException {
         if (look.tag == tag) {
             move();
         } else {
@@ -47,7 +47,7 @@ public class Parser {
         statement.emitLabel(after);
     }
 
-    Statement block() throws IOException {
+    private Statement block() throws IOException {
         match('{');
         Environment savedEnvironment = top;
         top = new Environment(top);
@@ -58,9 +58,15 @@ public class Parser {
         return statement;
     }
 
-    void deClause() throws IOException {
+    private void deClause() throws IOException {
         while (look.tag == Tag.BASIC) {
             Type type = type();
+            Token token = look;
+            match(Tag.IDENTIFIER);
+            match(';');
+            Identifier identifier = new Identifier((Word) token, type, used);
+            top.put(token, identifier);
+            used += type.width;
         }
     }
 
@@ -90,7 +96,7 @@ public class Parser {
 
     Statement statements() throws IOException {
         if (look.tag == '}') {
-            return Statement.Null;
+            return Statement.NULL;
         } else {
             return new Sequence(statement(), statements());
         }
@@ -103,7 +109,7 @@ public class Parser {
         switch (look.tag) {
             case ';':
                 move();
-                return Statement.Null;
+                return Statement.NULL;
             case Tag.IF:
                 match(Tag.IF);
                 match('(');
@@ -118,20 +124,20 @@ public class Parser {
                 return new Else(node, statement1, statement2);
             case Tag.WHILE:
                 While whileNode = new While();
-                savedStatement = Statement.Enclosing;
-                Statement.Enclosing = whileNode;
+                savedStatement = Statement.ENCLOSING;
+                Statement.ENCLOSING = whileNode;
                 match(Tag.WHILE);
                 match('(');
                 node = bool();
                 match(')');
                 statement1 = statement();
                 whileNode.init(node, statement1);
-                Statement.Enclosing = savedStatement;
+                Statement.ENCLOSING = savedStatement;
                 return whileNode;
             case Tag.DO:
                 Do doExpression = new Do();
-                savedStatement = Statement.Enclosing;
-                Statement.Enclosing = doExpression;
+                savedStatement = Statement.ENCLOSING;
+                Statement.ENCLOSING = doExpression;
                 match(Tag.DO);
                 statement1 = statement();
                 match(Tag.WHILE);
@@ -140,7 +146,7 @@ public class Parser {
                 match(')');
                 match(';');
                 doExpression.init(statement1, node);
-                Statement.Enclosing = savedStatement;
+                Statement.ENCLOSING = savedStatement;
                 return doExpression;
             case Tag.BREAK:
                 match(Tag.BREAK);
