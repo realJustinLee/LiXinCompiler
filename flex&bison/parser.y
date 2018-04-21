@@ -2,19 +2,27 @@
 #include <ctype.h>
 #include <stdio.h>
 #define YYSTYPE double
+%}
 
+%{
 create_parser.YYSTYPE yyval = (create_parser.YYSTYPE)yyparserref.yyvalref
 
 %}
 
-\+ return create_parser.token_add
-\- return create_parser.token_sub
-\* return create_parser.token_mul
-\/ return create_parser.token_div
-\( return create_parser.token_open_bracket
-\) return create_parser.token_close_bracket
+\+ if(yyleng>0) return create_parser.token_add;
+\- if(yylrng>0) return create_parser.token_sub;
+\* if(yyleng>0) return create_parser.token_mul;
+\/ if(yyleng>0) return create_parser.token_div;
+\( if(yyleng>0) return create_parser.token_open_bracket;
+\) if(yyleng>0) return create_parser.token_close_bracket;
+\n if(yyleng>0) return create_parser.token_semi;
 
-[a-zA-Z][a-zA-Z0-9*] return create_parser.token_id ;
+[a-zA-Z][a-zA-Z0-9*] if(yyleng>0) return create_parser.token_id;
+[1-9][0-9]* if(yyleng>0) return create_parser.token_const;
+
+.;
+
+%%
 
 %start S
 %left token_add token_sub
