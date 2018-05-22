@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Online Compiler/Online Compiler.iml" filepath="$PROJECT_DIR$/Online Compiler/Online Compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Simple Java Implementation/Simple Java Implementation.iml" filepath="$PROJECT_DIR$/Simple Java Implementation/Simple Java Implementation.iml" />
+    </modules>
+  </component>
+</project>

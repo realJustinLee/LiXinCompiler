@@ -4,7 +4,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" />
+          <unit-entry name="hibernate.cfg.xml" value="ab3d54a2-31bc-406e-8388-99e8d21a92a9" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
@@ -39,8 +39,5 @@
     <orderEntry type="library" name="Hibernate 5.2.16-5.2.16" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.8" level="application_server_libraries" />
     <orderEntry type="library" name="Struts 2-2.5.14.1" level="project" />
-    <orderEntry type="library" name="jquery-3.3.1.slim" level="application" />
-    <orderEntry type="library" name="popper" level="application" />
-    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>
