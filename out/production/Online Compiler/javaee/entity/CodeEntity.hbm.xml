@@ -11,8 +11,11 @@
         <property name="uploadtime">
             <column name="uploadtime" sql-type="datetime"/>
         </property>
+        <property name="title">
+            <column name="title" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
         <property name="content">
-            <column name="content" sql-type="varchar(10000)" length="10000" not-null="true"/>
+            <column name="content" sql-type="varchar(10000)" length="10000" not-null="false"/>
         </property>
         <many-to-one name="username" column="username"/>
     </class>

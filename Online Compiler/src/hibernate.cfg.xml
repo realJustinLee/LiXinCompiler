@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.url">jdbc:mysql://admin.lixin-computer.com:3306/javaee?serverTimezone=UTC</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.username">javaee</property>
         <property name="connection.password">javaee</property>
         <mapping class="javaee.entity.BulletinEntity"/>

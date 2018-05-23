@@ -28,23 +28,23 @@ abstract class Init {
         return errString;
     }
 
-    boolean CheckUsername(String username) {
+    boolean IsInvalidUsername(String username) {
         if (username.length() > 20) {
             errString = "用户名不可超过20个字符";
-            return false;
+            return true;
         }
         if (!username.matches(".*[a-zA-Z0-9]+.*")) {
             errString = "用户名必须由字母和数字组成";
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
-    boolean CheckPassword(String password) {
+    boolean IsInvalidPassword(String password) {
         if (!password.matches("^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,20}$")) {
             errString = "密码必须由字母和数字组成，且长度必须在8-20之间";
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }

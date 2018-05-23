@@ -11,6 +11,8 @@ public class CodeEntity {
     private Timestamp uploadtime;
     private String content;
     private UserEntity username;
+    private String title;
+
 
     public UserEntity getUsername() {
         return username;
@@ -64,5 +66,15 @@ public class CodeEntity {
     public int hashCode() {
 
         return Objects.hash(id, uploadtime, content);
+    }
+
+    @Basic
+    @Column(name = "title", length = 100)
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

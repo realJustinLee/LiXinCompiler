@@ -1049,31 +1049,38 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="242" name="content">
+    <column id="259" parent="242" name="title">
       <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+      <Collation>utf8_general_ci</Collation>
+    </column>
+    <column id="260" parent="242" name="content">
+      <Position>5</Position>
       <DataType>varchar(10000)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
-    <index id="260" parent="242" name="code_id_uindex">
+    <index id="261" parent="242" name="code_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="261" parent="242" name="code_user_username_fk">
+    <index id="262" parent="242" name="code_user_username_fk">
       <ColNames>username</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="262" parent="242" name="PRIMARY">
+    <key id="263" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="263" parent="242" name="code_id_uindex">
+    <key id="264" parent="242" name="code_id_uindex">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>code_id_uindex</UnderlyingIndexName>
     </key>
-    <foreign-key id="264" parent="242" name="code_user_username_fk">
+    <foreign-key id="265" parent="242" name="code_user_username_fk">
       <ColNames>username</ColNames>
       <RefSchemaName>javaee</RefSchemaName>
       <RefTableName>user</RefTableName>
@@ -1081,30 +1088,30 @@
       <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="265" parent="243" name="username">
+    <column id="266" parent="243" name="username">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_general_ci</Collation>
     </column>
-    <column id="266" parent="243" name="password">
+    <column id="267" parent="243" name="password">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="267" parent="243" name="UserPswd_username_uindex">
+    <index id="268" parent="243" name="UserPswd_username_uindex">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="268" parent="243" name="PRIMARY">
+    <key id="269" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="269" parent="243" name="UserPswd_username_uindex">
+    <key id="270" parent="243" name="UserPswd_username_uindex">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>UserPswd_username_uindex</UnderlyingIndexName>
     </key>
