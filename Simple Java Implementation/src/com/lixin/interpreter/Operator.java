@@ -15,7 +15,7 @@ public class Operator extends Expression {
     public Expression reduce() {
         Expression expression = generate();
         Temp temp = new Temp(type);
-        emit(temp.toString() + "=" + expression.toString());
+        emit(temp.toString() + " = " + expression.toString());
         return temp;
     }
 }
