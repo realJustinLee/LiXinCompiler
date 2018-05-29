@@ -131,9 +131,9 @@ L1:	i = 0
 L3:	if not i < 10 goto L4
 L5:	j = 0
 L6:	if not j < 10 goto L7
-L8:	t1=i * 80
-	t2=j * 8
-	t3=t1 + t2
+L8:	t1 = i * 80
+	t2 = j * 8
+	t3 = t1 + t2
 	a [ t3 ] = 0.0
 L9:	j = j + 1
 	goto L6
@@ -141,9 +141,9 @@ L7:	i = i + 1
 	goto L3
 L4:	i = 0
 L10:	if not i < 10 goto L2
-L11:	t4=i * 80
-	t5=i * 8
-	t6=t4 + t5
+L11:	t4 = i * 80
+	t5 = i * 8
+	t6 = t4 + t5
 	a [ t6 ] = 1.0
 L12:	i = i + 1
 	goto L10
@@ -230,22 +230,22 @@ lxc>
 输出
 ```
 L1:L3:	i = i + 1
-L5:	t1=i * 8
-	t2=a [ t1 ]
+L5:	t1 = i * 8
+	t2 = a [ t1 ]
 	if t2 < v goto L3
 L4:	j = j - 1
-L7:	t3=j * 8
-	t4=a [ t3 ]
+L7:	t3 = j * 8
+	t4 = a [ t3 ]
 	if t4 > v goto L4
 L6:	if not i >= j goto L8
 L9:	goto L2
-L8:	t5=i * 8
+L8:	t5 = i * 8
 	x = a [ t5 ]
-L10:	t6=i * 8
-	t7=j * 8
-	t8=a [ t7 ]
+L10:	t6 = i * 8
+	t7 = j * 8
+	t8 = a [ t7 ]
 	a [ t6 ] = t8
-L11:	t9=j * 8
+L11:	t9 = j * 8
 	a [ t9 ] = x
 	goto L1
 L2:
