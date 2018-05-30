@@ -8,16 +8,15 @@ import java.io.PrintStream;
  * @author lixin
  */
 public class CompilerTestDriver {
-    static String in;
-    static String out;
-
     public static void main(String[] args) {
+        Compiler compiler = new Compiler();
+        // 文件方法
         File fileIn = new File("/Users/lixin/Downloads/in.txt");
         File fileOut = new File("/Users/lixin/Downloads/out.txt");
-        Compiler compiler = new Compiler();
         compiler.compile(fileIn, fileOut);
 
-        in = "{\n" +
+        // String 参数方法
+        String in = "{\n" +
                 "\tint i; int j; float v; float x; float[100] a;\n" +
                 "\twhile( true ) {\n" +
                 "\t\tdo i = i+1; while( a[i] < v);\n" +
@@ -27,7 +26,7 @@ public class CompilerTestDriver {
                 "\t}\n" +
                 "}\n" +
                 "{}";
-        out = compiler.compile(in);
+        String out = compiler.compile(in);
         System.out.print(out);
     }
 }
