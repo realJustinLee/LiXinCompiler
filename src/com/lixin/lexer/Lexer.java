@@ -63,6 +63,7 @@ public class Lexer {
             switch (peek) {
                 case ' ':
                 case '\t':
+                case '\r':
                     readChar();
                     continue;
                 case '\n':
