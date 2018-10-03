@@ -1,8 +1,6 @@
 package com.lixin.main;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 
 /**
  * @author lixin

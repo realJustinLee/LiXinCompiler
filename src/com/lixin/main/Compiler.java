@@ -2,15 +2,14 @@ package com.lixin.main;
 
 import com.lixin.lexer.Lexer;
 import com.lixin.parser.Parser;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 
 import java.io.*;
 
 /**
  * @author lixin
  */
-public class Compiler {
-    public void compile(File in, File out) {
+class Compiler {
+    void compile(File in, File out) {
         InputStream sysIn = System.in;
         PrintStream sysOut = System.out;
         try {
@@ -32,13 +31,13 @@ public class Compiler {
         }
     }
 
-    public String compile(String in) {
+    String compile(String in) {
         InputStream sysIn = System.in;
         PrintStream sysOut = System.out;
         try {
             ByteArrayInputStream inputStream = new ByteArrayInputStream(in.getBytes());
             System.setIn(inputStream);
-            ByteOutputStream outputStream = new ByteOutputStream();
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             PrintStream printStream = new PrintStream(outputStream);
             System.setOut(printStream);
             System.out.println("lxc>");

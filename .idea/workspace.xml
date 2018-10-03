@@ -2,9 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f6b19a-54cb-47c6-bec5-1b7298521fee" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/main/CompilerTestDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/main/CompilerTestDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Access.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/And.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Arithmetic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Break.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Constant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Do.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Else.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Expression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Identifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/If.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Logical.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Not.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Operator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Or.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Relation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Sequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Set.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/SetElem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Statement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Temp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/Unary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/interpreter/While.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/lexer/Lexer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/lexer/Numeric.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/lexer/Real.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/lexer/Tag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/lexer/Token.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/lexer/Word.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/main/Compiler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/main/CompilerTestDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/parser/Parser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/symbols/Array.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/symbols/Environment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LiXinCompiler/com/lixin/symbols/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lixin/main/Compiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/main/Compiler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/lixin/main/CompilerTestDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lixin/main/CompilerTestDriver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,79 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lixin/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LiXinCompiler.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="4161">
-                <caret line="219" selection-start-line="219" selection-end-line="227" selection-end-column="1" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Temp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Tag.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/While.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/parser/Parser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/lixin/main/CompilerTestDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,10 +65,94 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Break.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Constant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Type.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Environment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/parser/Parser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3531">
+              <caret line="104" column="22" lean-forward="true" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Array.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/main/CompilerTestDriver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Do.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/lixin/main/Compiler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="178">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,603 +187,16 @@
         <option value="$PROJECT_DIR$/../Great-Li-Xin.github.io/source/_posts/LiXinCompiler.md" />
         <option value="$PROJECT_DIR$/src/com/lixin/main/in.txt" />
         <option value="$PROJECT_DIR$/src/com/lixin/main/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/lixin/main/Compiler.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java" />
+        <option value="$PROJECT_DIR$/src/com/lixin/main/Compiler.java" />
         <option value="$PROJECT_DIR$/src/com/lixin/main/CompilerTestDriver.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
     <option name="width" value="1680" />
     <option name="height" value="960" />
-  </component>
-  <component name="ProjectUserFactors">
-    <factor id="binaryFeature:liftShorter">
-      <dailyData date="30-5-2018">
-        <observation name="false" value="171.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="false" value="4.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:liftShorterClasses">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="28.0" />
-        <observation name="false" value="143.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="2.0" />
-        <observation name="false" value="2.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:middleMatching">
-      <dailyData date="30-5-2018">
-        <observation name="false" value="169.0" />
-        <observation name="true" value="2.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="false" value="4.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:nonGeneric">
-      <dailyData date="30-5-2018">
-        <observation name="0" value="76.0" />
-        <observation name="UNDEFINED" value="95.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="0" value="1.0" />
-        <observation name="UNDEFINED" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:prox_inResolveScope">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="false" value="36.0" />
-        <observation name="true" value="120.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="true" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:prox_openedInEditor">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="false" value="110.0" />
-        <observation name="true" value="46.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="true" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:prox_sameDirectory">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="false" value="110.0" />
-        <observation name="true" value="46.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="true" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:prox_sameLogicalRoot">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="false" value="110.0" />
-        <observation name="true" value="46.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="true" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:prox_sdkOrLibrary">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="false" value="82.0" />
-        <observation name="true" value="74.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="false" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="binaryFeature:templates">
-      <dailyData date="30-5-2018">
-        <observation name="false" value="171.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="false" value="4.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:accessible">
-      <dailyData date="30-5-2018">
-        <observation name="NORMAL" value="156.0" />
-        <observation name="UNDEFINED" value="15.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="NORMAL" value="3.0" />
-        <observation name="UNDEFINED" value="1.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:expectedType">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="expected" value="45.0" />
-        <observation name="maybeExpected" value="13.0" />
-        <observation name="normal" value="98.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="expected" value="2.0" />
-        <observation name="normal" value="1.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:kind">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="classNameOrGlobalStatic" value="48.0" />
-        <observation name="expectedTypeVariable" value="23.0" />
-        <observation name="normal" value="61.0" />
-        <observation name="probableKeyword" value="8.0" />
-        <observation name="suitableClass" value="2.0" />
-        <observation name="unlikelyClass" value="2.0" />
-        <observation name="variable" value="12.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="classNameOrGlobalStatic" value="2.0" />
-        <observation name="variable" value="1.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="unknown" value="156.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="unknown" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:prox_javaInheritance">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="false" value="52.0" />
-        <observation name="null" value="104.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="false" value="2.0" />
-        <observation name="null" value="1.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:prox_referenceList">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="unknown" value="156.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="unknown" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="categoricalFeature:recursion">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="46.0" />
-        <observation name="normal" value="125.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="2.0" />
-        <observation name="normal" value="2.0" />
-      </dailyData>
-    </factor>
-    <factor id="completionFinishedType">
-      <dailyData date="30-5-2018">
-        <observation name="cancelled" value="136.0" />
-        <observation name="explicitSelect" value="141.0" />
-        <observation name="typedSelect" value="30.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="cancelled" value="10.0" />
-        <observation name="explicitSelect" value="3.0" />
-        <observation name="typedSelect" value="1.0" />
-      </dailyData>
-    </factor>
-    <factor id="completionType">
-      <dailyData date="30-5-2018">
-        <observation name="BASIC" value="195.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="BASIC" value="4.0" />
-      </dailyData>
-    </factor>
-    <factor id="completionUsage">
-      <dailyData date="30-5-2018">
-        <observation name="count" value="307.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="count" value="14.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:explicitProximity">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="0.099707" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="1.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.075277" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:grouping">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:mostUsed">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="113.0" />
-        <observation name="average" value="-7.53913" />
-        <observation name="count" value="115.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-33.0" />
-        <observation name="variance" value="67.809785" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="2.0" />
-        <observation name="average" value="-1.0" />
-        <observation name="count" value="3.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-3.0" />
-        <observation name="variance" value="0.5" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:nameEnd">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="-0.090032" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-1.0" />
-        <observation name="variance" value="0.055066" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:position">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="0.093842" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="2.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.079308" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:prefix">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="-1088.926686" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-1202.0" />
-        <observation name="variance" value="23387.415147" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="-1109.714286" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="-1052.0" />
-        <observation name="min" value="-1154.0" />
-        <observation name="variance" value="1050.680272" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:priority">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="-0.029326" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-2.0" />
-        <observation name="variance" value="0.038346" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:prox_explicitlyImported">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="113.504823" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="300.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="12420.3205" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="240.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="300.0" />
-        <observation name="min" value="200.0" />
-        <observation name="variance" value="900.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:prox_knownElement">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="2.398714" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="8.0" />
-        <observation name="min" value="-1.0" />
-        <observation name="variance" value="9.95122" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:prox_sameModule">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="0.59164" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="2.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.679241" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="2.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="2.0" />
-        <observation name="min" value="2.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:prox_samePsiMember">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="0.495177" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="2.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.588834" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="0.8" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="2.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.36" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:query_length">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="0.0" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:result_length">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="6.533724" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="21.0" />
-        <observation name="min" value="1.0" />
-        <observation name="variance" value="18.656035" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="8.571429" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="9.0" />
-        <observation name="min" value="8.0" />
-        <observation name="variance" value="0.102993" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:sameWords">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="-0.109325" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-1.0" />
-        <observation name="variance" value="0.066698" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:shorter">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="-89.916399" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="-999.0" />
-        <observation name="variance" value="54922.958152" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:simple">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="15.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="311.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="1.0" />
-        <observation name="average" value="0.0" />
-        <observation name="count" value="5.0" />
-        <observation name="max" value="0.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:sorter">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="1.0" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="1.0" />
-        <observation name="min" value="1.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="1.0" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="1.0" />
-        <observation name="min" value="1.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:statics">
-      <dailyData date="30-5-2018">
-        <observation name="UNDEFINED" value="128.0" />
-        <observation name="average" value="-3.494118" />
-        <observation name="count" value="85.0" />
-        <observation name="max" value="-3.0" />
-        <observation name="min" value="-5.0" />
-        <observation name="variance" value="0.522207" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="UNDEFINED" value="3.0" />
-        <observation name="average" value="-3.0" />
-        <observation name="count" value="1.0" />
-        <observation name="max" value="-3.0" />
-        <observation name="min" value="-3.0" />
-        <observation name="variance" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="doubleFeature:stats">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="2866.492669" />
-        <observation name="count" value="341.0" />
-        <observation name="max" value="10000.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="16459216.69821" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="4283.142857" />
-        <observation name="count" value="7.0" />
-        <observation name="max" value="10000.0" />
-        <observation name="min" value="0.0" />
-        <observation name="variance" value="10288119.623401" />
-      </dailyData>
-    </factor>
-    <factor id="itemPosition">
-      <dailyData date="30-5-2018">
-        <observation name="0" value="126.0" />
-        <observation name="1" value="14.0" />
-        <observation name="2" value="1.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="0" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="mnemonicsUsage">
-      <dailyData date="30-5-2018">
-        <observation name="total" value="114.0" />
-        <observation name="withMnemonics" value="6.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="total" value="3.0" />
-        <observation name="withMnemonics" value="0.0" />
-      </dailyData>
-    </factor>
-    <factor id="prefixLength">
-      <dailyData date="30-5-2018">
-        <observation name="0" value="4.0" />
-        <observation name="1" value="23.0" />
-        <observation name="2" value="54.0" />
-        <observation name="3" value="41.0" />
-        <observation name="4" value="11.0" />
-        <observation name="5" value="5.0" />
-        <observation name="6" value="2.0" />
-        <observation name="7" value="1.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="3" value="3.0" />
-      </dailyData>
-    </factor>
-    <factor id="timeBetweenTyping">
-      <dailyData date="30-5-2018">
-        <observation name="average" value="226.198582" />
-        <observation name="count" value="141.0" />
-      </dailyData>
-      <dailyData date="31-5-2018">
-        <observation name="average" value="120.4" />
-        <observation name="count" value="5.0" />
-      </dailyData>
-    </factor>
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -798,15 +260,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="Temp&#9;PSI&#9;JAVA://com.lixin.lexer.Tag#TEMP&#10;emit&#9;PSI&#9;JAVA://com.lixin.interpreter.Node#emit" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538548992947" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -826,7 +289,8 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.CompilerTestDriver">
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App" singleton="true">
+      <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
@@ -848,10 +312,11 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527728607906" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" />
       </method>
     </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests" singleton="true">
+      <module name="" />
       <option name="TESTING_TYPE" value="0" />
       <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
       <option name="METHOD_NAME" value="" />
@@ -872,7 +337,7 @@
       </Profilers>
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527728607907" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" />
       </method>
     </configuration>
     <configuration name="Compiler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -943,17 +408,18 @@
       <workItem from="1527683150744" duration="5472000" />
       <workItem from="1527727096029" duration="258000" />
       <workItem from="1527728096063" duration="486000" />
+      <workItem from="1538548506950" duration="465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6806000" />
+    <option name="totallyTimeSpent" value="7271000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="960" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="959" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -961,9 +427,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Learn" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.3298731" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32949308" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32949308" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32871974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -972,7 +439,8 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32949308" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32871974" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -986,9 +454,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Great-Li-Xin.github.io/source/_posts/LiXinCompiler.md">
@@ -1009,13 +474,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/main/in.txt" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/io/ByteArrayOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/src.zip!/java/io/ByteArrayOutputStream.java" />
     <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Logical.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1050,48 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Access.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/And.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Arithmetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Break.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Do.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Else.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-73">
@@ -1110,13 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1140,6 +550,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Tag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1154,37 +571,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Access.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/And.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Arithmetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Break.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Do.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/interpreter/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Environment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/symbols/Array.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
+        <state relative-caret-position="-3531">
+          <caret line="104" column="22" lean-forward="true" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/main/Compiler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="178">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lixin/lexer/Lexer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/lixin/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+        <state relative-caret-position="285">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/lixin/main/CompilerTestDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="285">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1246,6 +744,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
