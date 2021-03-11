@@ -4,10 +4,7 @@ Referenced from the dragon-book, just a little implementation of the dragon-book
 参考自龙书上的语言，自己实现了一个编译器的前端。
 
 ## GitHub链接
-- [LiXinCompiler](https://github.com/Great-Li-Xin/LiXinCompiler)
-
-## 博客文章链接
-- [一个完整的编译器前端(Java 实现)](https://great-li-xin.github.io/2018/04/17/LiXinCompiler/)
+- [LiXinCompiler](https://github.com/realJustinLee/LiXinCompiler)
 
 ## 源语言
 这个语言由一个程序和一个块组成，该块中包含可选的声名和语句。语法符号```basic```表示基本类型。
@@ -251,6 +248,6 @@ L11:	t9 = j * 8
 L2:
 ```
 # 关于BUG、建议与意见
-请在[GitHub](https://github.com/Great-Li-Xin/LiXinCompiler)中提[issue](https://github.com/Great-Li-Xin/LiXinCompiler/issues/new)
+请在[GitHub](https://github.com/realJustinLee/LiXinCompiler)中提[issue](https://github.com/realJustinLee/LiXinCompiler/issues/new)
 
 我会尽快回答
